@@ -1,8 +1,7 @@
-FROM jenkins/jenkins:latest
+FROM jenkins/jenkins:lts-alpine
 
 
 #android env
-LABEL de.mindrunner.android-docker.flavour="alpine-standalone"
 ARG GLIBC_VERSION="2.28-r0"
 
 ENV ANDROID_SDK_HOME /opt/android-sdk-linux
