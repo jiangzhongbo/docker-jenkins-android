@@ -1,6 +1,6 @@
 FROM jenkins/jenkins:lts-alpine
 
-USER jenkins
+USER root
 
 #android env
 ARG GLIBC_VERSION="2.28-r0"
