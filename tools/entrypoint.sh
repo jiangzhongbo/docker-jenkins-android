@@ -8,7 +8,7 @@ function su_mt_user() {
     su android -c '"$0" "$@"' -- "$@"
 }
 
-chown android:android /opt/android-sdk-linux
+# chown android:android /opt/android-sdk-linux
 
 printenv
 
