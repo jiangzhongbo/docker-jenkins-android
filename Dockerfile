@@ -33,9 +33,9 @@ RUN apk -U update && apk -U add \
 	&& rm -rf /var/cache/apk/*
 
 # Create android User
-RUN mkdir -p /opt/android-sdk-linux \
-  && addgroup android \
-  && adduser android -D -G android -h /opt/android-sdk-linux -u 1001
+# RUN mkdir -p /opt/android-sdk-linux \
+#   && addgroup android \
+#   && adduser android -D -G android -h /opt/android-sdk-linux -u 1001
 
 # Copy Tools
 COPY tools /opt/tools
@@ -45,5 +45,5 @@ COPY licenses /opt/licenses
 
 # Working Directory
 # WORKDIR /opt/android-sdk-linux
-
+RUN chmod 777 -R /opt/tools
 RUN /opt/tools/entrypoint.sh built-in
