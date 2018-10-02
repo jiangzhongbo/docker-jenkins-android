@@ -91,8 +91,4 @@ platforms;android-25
 platforms;android-26
 platforms;android-27
 platforms;android-28
-platforms;android-7
-platforms;android-8
-platforms;android-9
-platforms;android-P
 tools
