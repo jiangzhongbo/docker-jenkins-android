@@ -1,5 +1,6 @@
 FROM jenkins/jenkins:lts-alpine
 
+USER jenkins
 
 #android env
 ARG GLIBC_VERSION="2.28-r0"
@@ -32,9 +33,9 @@ RUN apk -U update && apk -U add \
 	&& rm -rf /var/cache/apk/*
 
 # Create android User
-RUN mkdir -p /opt/android-sdk-linux \
-  && addgroup android \
-  && adduser android -D -G android -h /opt/android-sdk-linux -u 1000
+# RUN mkdir -p /opt/android-sdk-linux \
+#   && addgroup android \
+#   && adduser android -D -G android -h /opt/android-sdk-linux -u 1000
 
 # Copy Tools
 COPY tools /opt/tools
